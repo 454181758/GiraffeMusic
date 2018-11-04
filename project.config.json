@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wxf9b4752978541d86",
+	"appid": "wx9c3d46a444c29865",
 	"projectname": "GiraffeMusic",
 	"debugOptions": {
 		"hidedInDevtools": []

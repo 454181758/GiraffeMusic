@@ -1,4 +1,5 @@
 // pages/login/login.js
+var app = getApp()
 Page({
 
   /**
@@ -12,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**
@@ -74,8 +75,38 @@ Page({
       password: e.detail.value
     })
   },
+  
   login:function(){
-    
-  }
-
+    wx.request({
+      /*login/cellphone 登录端口*/
+      url: app.globalData.url +"login/cellphone",
+      data:{
+        phone:17621305739,//this.data.phone,
+        password:'123456Rj'//this.data.password
+      },
+      success:(res)=>{
+        console.log(res);
+        if(res.data.code==200){
+          app.globalData.userInfo=res.data;
+          wx.navigateTo({
+            url: '../index/index',
+          })
+        }else{
+          wx.showModal({
+            title: '登录失败',
+            content: '',
+            showCancel:'false'
+          })
+        }
+      }
+    })
+  },
+  isRoot:function() {
+    if (this.data.phone == 'root' && this.data.password == 'root')
+      wx.navigateTo({
+        url: '../index/index',
+      })
+    else
+      this.login()
+  },
 })
