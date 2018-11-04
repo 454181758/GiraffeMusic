@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<view  class='body'>
+  <input class='phone' placeholder='手机号' bindinput='phone'></input>
+  <input class='password' placeholder='密码' bindinput='password'></input>
+  <button class='login'>登录</button>
+</view>
