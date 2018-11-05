@@ -9,4 +9,28 @@
   box-sizing: border-box;
 } 
 
+.afont{
+  font-size:16px;
+  color:black;
+}
+
+.small{
+  font-size: 14px;
+  color:#A7A7A7;
+}
+
+.verysmall{
+  font-size: 12px;
+  color:#A7A7A7;
+}
+
+
+.smallImage{
+  height:50rpx;
+  width:50rpx;
+}
+
+.hover_active {
+  background-color: #ECECEC;
+}
 @import 'weui.wxss';

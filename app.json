@@ -3,11 +3,12 @@
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/playList/playList"
+    "pages/playList/playList",
+    "pages/audio/audio"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#BB4E55",
+    "navigationBarBackgroundColor": "#D43C33",
     "navigationBarTitleText": "GiraffeMusic",
     "navigationBarTextStyle": "white"
   }

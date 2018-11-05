@@ -81,8 +81,8 @@ Page({
       /*login/cellphone 登录端口*/
       url: app.globalData.url +"login/cellphone",
       data:{
-        phone:17621305739,//this.data.phone,
-        password:'123456Rj'//this.data.password
+        phone:this.data.phone,
+        password:this.data.password
       },
       success:(res)=>{
         console.log(res);
@@ -91,6 +91,7 @@ Page({
           wx.navigateTo({
             url: '../index/index',
           })
+
         }else{
           wx.showModal({
             title: '登录失败',

@@ -1,6 +1,7 @@
 <!--pages/login/login.wxml-->
 <view  class='body'>
+  <view class="info">请用网易云账号登录</view>
   <input class='phone' placeholder='手机号' bindinput='phone'></input>
   <input class='password' placeholder='密码' type='password' bindinput='password'></input>
-  <button class='login' bindtap='isRoot'>登录</button>
+  <button class='login' bindtap='isRoot' hover-class='hover_active'>登录</button>
 </view>

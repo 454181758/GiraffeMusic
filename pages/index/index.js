@@ -123,7 +123,6 @@ Page({
     })
   },
   toPlayList(e) {
-    console.log(e.currentTarget.dataset.id)
     wx.setStorage({
       key: 'listid',
       data: e.currentTarget.dataset.id,

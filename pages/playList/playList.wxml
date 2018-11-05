@@ -1,2 +1,52 @@
 <!--pages/playList/playList.wxml-->
-<text>pages/playList/playList.wxml</text>
+<view>
+  <view class="bg" style="background-image:url({{playList.coverImgUrl}})"></view>
+  <view class="topView">
+    <view class="imgView">
+      <image src="{{playList.coverImgUrl}}"></image>
+    </view>
+    <view class="briefView">
+      <view class="name">{{playList.name}}</view>
+      <view class="author">
+        <image src="{{playList.creator.avatarUrl}}"></image>
+        {{playList.creator.nickname}} >
+      </view>
+    </view>
+  </view>
+  <view class="listView">
+    <view class="playAll" bindtap='toPlayAll'>
+      <view class="bofang">
+        <image src="../../img/playall.png" class="smallImage"></image>
+        <view class="play-b1">
+          播放全部
+        </view>
+        <view class="count small">
+          （共{{playList.trackCount}}首）
+        </view>     
+      </view>
+      <view class="collect" wx:if="{{!playList.ordered}}">
+        + 收藏({{playList.subscribedCount}})
+      </view>
+      <view class="collected" wx:if="{{playList.ordered}}">
+        <image src="../../img/gou.png" class="smallImage"></image>
+        {{playList.subscribedCount}}
+      </view>
+    </view>
+
+    <view class="songlist">
+      <block wx:for="{{songs}}" wx:key="index">
+        <view class="item" data-id="{{item.id}}" bindtap="toAudio" hover-class="hover_active">
+          <view class="item-id small">{{index+1}}</view>
+          <view class="item-detail" >
+            <cover-view class="song-name afont">{{item.name}}</cover-view>
+            <cover-view class="song-author verysmall">{{item.ar[0].name}}</cover-view>
+          </view>
+          <view class="item-video">
+            <image src="../../img/play2.png" class="smallImage"></image>
+          </view>
+          <view class="item-more small" >· · ·</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

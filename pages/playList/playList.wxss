@@ -1,1 +1,156 @@
 /* pages/playList/playList.wxss */
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 180px;
+    background:  no-repeat left top;
+    background-size: 110% 110%;
+    background-color: rgba(63,63,62,0.1);
+    filter: blur(30px)
+}
+
+.topView{
+  display: flex;
+  justify-content: space-around;
+  height:360rpx;
+  align-items: center;
+}
+
+.imgView{
+  width: 50%;
+  text-align: center;
+}
+.imgView>image{
+  width: 220rpx;
+  height:220rpx;
+  border-radius: 5rpx;
+}
+
+.briefView{
+  margin-top: 120rpx;
+  padding:0 30rpx 0 0;
+  width: 50%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+.name{
+  color:white;
+  font-size:35rpx;
+}
+
+.author{
+  color:white;
+  font-size:25rpx;
+  margin-top:30rpx;
+}
+.author>image{
+  width: 60rpx;
+  height:60rpx;
+  border-radius:50%;
+  vertical-align: middle;
+}
+
+.listView{
+  display: flex;
+  height:200rpx;
+  margin-top:-20rpx;
+  border-radius: 15rpx;
+  background: white;
+  flex-flow: wrap;
+}
+
+.listView .playAll{
+  display: flex;
+  align-items: center;
+  height:90rpx;
+  width: 100%;
+  border-top-right-radius: 15rpx;
+}
+.listView .playAll .bofang{
+  width: 60%;
+}
+.listView .playAll .collect{
+  width: 40%;
+  height:100%;
+  border-top-right-radius: 15rpx;
+  color:white;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 16px;
+  background:#D43C33;
+}
+.listView .playAll .collected{
+  width: 40%;
+  height:100%;
+  border-top-right-radius: 15rpx;
+  color:#A7A7A7;
+  line-height: 90rpx;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listView .playAll .bofang{
+  margin-left:40rpx;
+  display: flex;
+  align-items: center;
+
+}
+.play-b1{
+  font-size: 16px;
+  margin-left:20rpx;
+}
+
+.songlist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left:40rpx;
+  width: 100%;
+}
+.songlist .item{
+  width:100%;
+  display: flex;
+  align-items: center;
+  height:120rpx;
+  margin-left:25rpx;
+  border-top: 1rpx solid #D9D9D9;
+}
+.songlist .item .item-id{
+  width:8%;
+} 
+.songlist .item .item-detail{
+  width:62%;
+  display: flex;
+  flex-direction: column;
+}
+.songlist .item .item-detail .song-name{
+  width: 100%;
+  text-overflow: ellipsis;
+  margin-bottom:12rpx;
+}
+.songlist .item .item-detail .song-author{
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.songlist .item .item-video{
+  width:15%;
+  display: flex;
+  align-items: middle;
+  justify-content: center;
+}
+.songlist .item .item-more{
+  width:15%;
+  display: flex;
+  justify-content: right;
+  font-size:16px;
+}

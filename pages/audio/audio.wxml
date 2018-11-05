@@ -1,0 +1,36 @@
+<!--pages/audio/audio.wxml-->
+<view class="bg" style="background-image:url({{song.al.picUrl}})"></view>
+
+<view class="body">
+  <view class="sing-brief">
+    <view class="sing-name">{{song.name}}</view>
+    <view class="singer-name">
+      <text wx:for="{{song.ar}}" wx:key="index" style="margin-left:10px">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="sing-show">
+    <image src="../../img/stick.png" class="coverImgStick"></image>
+    <image src="../../img/disk.png" class="coverImgBg"/>
+  </view>
+
+  <view class="control-bottom">
+    <view class="control-bottom-view control-type">
+      <image src="../../img/loop.png" bindtap='changePlay' hidden='{{loop}}'/>
+      <image src="../../img/oneloop.png" bindtap='changePlay' hidden='{{oneloop}}'/>
+      <image src="../../img/random.png" bindtap='changePlay' hidden='{{random}}'/>
+    </view>
+    <view class="control-bottom-view control-prev">
+      <image src="../../img/pre.png" bindtap='pre'/>
+    </view>
+    <view class="control-bottom-view control-pause">
+      <image src="{{statusImg}}" bindtap="changeStatus" />
+    </view>   
+    <view class="control-bottom-view control-next">
+      <image src="../../img/next.png" bindtap='next'/>
+    </view>
+    <view class="control-bottom-view surprise">
+      <image src="../../img/list.png" bindtap='surprise'/>
+    </view>
+  </view>
+</view>

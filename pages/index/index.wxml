@@ -8,6 +8,13 @@
       <image src="{{secondImg}}" class="barImg" bindtap="toDaliy"></image>
     </view>
   </view>
+  <view class="slider">
+    <swiper autoplay interval="3500" indicator-dots>
+      <swiper-item wx:for="{{banners}}" wx:key="index">     
+        <image  src="{{item.imageUrl}}" mode="aspectFill" width="375" height="150"/>
+      </swiper-item> 
+    </swiper>
+  </view>
   <view wx:if="{{nowTab==1}}">
     <block wx:for="{{playlist}}" wx:key="index">
       <view url="" data-id="{{item.id}}"  class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="toPlayList">
