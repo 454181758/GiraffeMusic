@@ -8,8 +8,7 @@ Page({
   data: {
     song:{},
     statusImg: '../../img/play.png',
-    songUrl:'',
-    innerAudioContext:null
+    songUrl:''
   },
 
   /**
@@ -75,7 +74,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    this.stopAudio()
+    
   },
 
   /**
@@ -99,20 +98,21 @@ Page({
   
   },
   createAudio(){
-    this.data.innerAudioContext=wx.createInnerAudioContext();
-    this.data.innerAudioContext.autoplay=true;
-    this.data.innerAudioContext.src=this.data.songUrl;
-    this.data.innerAudioContext.onPlay(()=>{
+    this.stopAudio();
+    app.globalData.innerAudioContext=wx.createInnerAudioContext();
+    app.globalData.innerAudioContext.autoplay=true;
+    app.globalData.innerAudioContext.src=this.data.songUrl;
+    app.globalData.innerAudioContext.onPlay(()=>{
       console.log('开始播放')
     })
-    this.data.innerAudioContext.onError((res)=>{
+    app.globalData.innerAudioContext.onError((res)=>{
       console.log(res.errMsg)
       console.log(res.Code)
     })
   },
   stopAudio(){
-    if (this.data.innerAudioContext) {
-      this.data.innerAudioContext.stop()
+    if (app.globalData.innerAudioContext) {
+      app.globalData.innerAudioContext.stop()
     }
   }
 })

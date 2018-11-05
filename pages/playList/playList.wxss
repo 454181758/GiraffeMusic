@@ -74,10 +74,10 @@
   border-top-right-radius: 15rpx;
 }
 .listView .playAll .bofang{
-  width: 60%;
+  width: 70%;
 }
 .listView .playAll .collect{
-  width: 40%;
+  width: 30%;
   height:100%;
   border-top-right-radius: 15rpx;
   color:white;
@@ -87,7 +87,7 @@
   background:#D43C33;
 }
 .listView .playAll .collected{
-  width: 40%;
+  width: 30%;
   height:100%;
   border-top-right-radius: 15rpx;
   color:#A7A7A7;
